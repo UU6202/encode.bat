@@ -23,7 +23,7 @@ pause
 if %count%==1 (
 set q="%p%"
 ) else (
-set q="%~n1contact.mkv"
+set q="%~n1concat.mkv"
 ffmpeg -i "concat:%p%" -c:v ffv1 -c:a copy !q!
 )
 ffmpeg -i %q% -c:v h264 -c:a copy -s 1536x1440 -sws_flags neighbor "%~n1encoded.mkv"
